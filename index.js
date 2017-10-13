@@ -11,7 +11,7 @@ async function test() {
     throw new Error('No arduino port found');
   }
 
-  const port = new SerialPort(arduino.comName, { autoOpen: false, baudRate: 9600 });
+  const port = new SerialPort(arduino.comName, { autoOpen: false, baudRate: 250000 });
   const Readline = SerialPort.parsers.Readline;
   const parser = port.pipe(new Readline({ delimiter: '\n' }));
 
