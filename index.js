@@ -19,8 +19,10 @@ async function test() {
   port.open(async () => {
     await delay(2000);
     port.write('Hello\n');
+    console.log('Just wrote "Hello"');
     await delay(2000);
     port.write('World\n');
+    console.log('Just wrote "World"');
   });
 }
 
